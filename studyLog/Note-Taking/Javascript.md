@@ -10,14 +10,13 @@
 - HTML은 웹페이지의 뼈대, CSS는 뼈대를 꾸미는 역할이라하면, Javascript는 동적으로 웹 페이지가 동작하도록 해준다.
   - 가령 마우스를 버튼위에 올렸을 때 색깔이 변한다거나 특정 **이벤트**를 했을 때 변경되게끔 도와주는 게 Javascript의 역할이다.
 - 예) Vanilla_Coding 예제
-    <header>
-        <div>
-        </div>
-    </header>
-  const header = document.querySelector('header')
-  const input = document.querySelector('input')
-  input.onkeydown = function changeHeader(){
-  header.textContent = input.value
-  }
+
+```javascript
+const header = document.querySelector("header");
+const input = document.querySelector("input");
+input.onkeydown = function changeHeader() {
+  header.textContent = input.value;
+};
+```
 
 > 예제를 통해서 보면 query 식별자를 통해서 Javascript는 HTML을 불러오고 input.onkeydown이라는 이벤트를 이용해서 클릭 또는 입력을 감지할 수 있다. 또한, 감지된 값을 HTML에 적용하여 변경도 할 수 있는 역할을한다.
