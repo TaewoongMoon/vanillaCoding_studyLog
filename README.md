@@ -10,3 +10,7 @@ This repo is a study log repository for vanilla coding admission prep
   - Folder 이름: Others
 
 ### 시작기간 (2021.9.30 ~)
+
+- 2021.10.01 ~ 2021.10.15 : 사전 스터디 Google Assignment까지 진행
+- 2021.10.18: Baseball Assignment 완료
+- 2021.10.19: 프로그래머스 Alogrithm Level 1, Intro to Programming Note-Taking & Exercise 진행
