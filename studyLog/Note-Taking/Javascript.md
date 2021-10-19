@@ -20,3 +20,23 @@ input.onkeydown = function changeHeader() {
 ```
 
 > 예제를 통해서 보면 query 식별자를 통해서 Javascript는 HTML을 불러오고 input.onkeydown이라는 이벤트를 이용해서 클릭 또는 입력을 감지할 수 있다. 또한, 감지된 값을 HTML에 적용하여 변경도 할 수 있는 역할을한다.
+
+# Commenting in Javascript
+
+- // or /\* \*/ 을 통해서 자바스크립트 코드위에 설명(주석)을 달 수 있다.
+
+# Variables (변수)
+
+- 종류는 세개의 타입이 있다. (var, let, const). **ES2015** 이후부터는 호이스팅 이슈와 코드블럭 범위의 이유로 var는 거의 쓰지 않는다.
+
+```javascript
+var a = 1; // '='의 역할은 값을 할당해주는 역할을 한다. a라는 변수에 1을 할당하는 expression이다.
+var vanilla_coding = function () {
+  return "Progress";
+}; // 위 expression의 a나 vanilla_coding를 Identifier라고 부르는데 몇가지 규칙이있다.
+```
+
+- Identifier 규칙
+  1. 알파벳, \_(underscore)등은 시작언어로 사용할 수 있다.
+  2. 숫자는 시작언어로 사용할 수 없다.
+  3. 예약어 (Reserved Words)는 사용할 수 없다 [ES2015 예약어목록](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Lexical_grammar#%ED%82%A4%EC%9B%8C%EB%93%9C)
