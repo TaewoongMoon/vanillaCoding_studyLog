@@ -9,11 +9,20 @@
     <button class="real">Two</button>
     <button class="real">Three</button>
     <script>
-      var btns = document.querySelectorAll(".real");
+      var btns = document.querySelectorAll('.real')
       for (let i = 0; i < btns.length; i++) {
         btns[i].onclick = function () {
-          console.log(i);
-        };
+          console.log(i)
+        }
+      }
+      const vanillaCoding = document.createElement('a')
+      vanillaCoding.textContent = '바닐라코딩'
+      vanillaCoding.href = 'https://www.vanillacoding.co/'
+      document.body.append(vanillaCoding)
+      for (let i = 0; i < 5; i++) {
+        const something = document.createElement('p')
+        something.textContent = i
+        document.body.appendChild(something)
       }
     </script>
   </body>

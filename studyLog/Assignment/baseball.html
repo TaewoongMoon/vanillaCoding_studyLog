@@ -7,55 +7,55 @@
   </head>
   <body>
     <script>
-      let title = document.createElement("h1");
-      title.textContent = "야구 숫자 맞추기";
-      document.body.append(title);
-      let submitForm = document.createElement("form");
-      document.body.append(submitForm);
-      let inputBox = document.createElement("input");
-      inputBox.placeholder = "숫자를 입력해주세요";
-      submitForm.append(inputBox);
-      let button = document.createElement("button");
-      button.textContent = "선택";
-      submitForm.append(button);
-      let computerNumber;
+      let title = document.createElement('h1')
+      title.textContent = '야구 숫자 맞추기'
+      document.body.append(title)
+      let submitForm = document.createElement('form')
+      document.body.append(submitForm)
+      let inputBox = document.createElement('input')
+      inputBox.placeholder = '숫자를 입력해주세요'
+      submitForm.append(inputBox)
+      let button = document.createElement('button')
+      button.textContent = '선택'
+      submitForm.append(button)
+      let computerNumber
       const computerNumberFunction = () => {
         computerNumber = Number(
-          String(Math.floor(Math.random() * 1000)).padStart(3, "4")
-        );
-        return computerNumber;
-      };
-      computerNumberFunction();
-      console.log(computerNumber);
-      console.log(String(computerNumber).split(""));
-      submitForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        let playersAnswer = inputBox.value;
+          String(Math.floor(Math.random() * 1000)).padStart(3, '4')
+        )
+        return computerNumber
+      }
+      computerNumberFunction()
+      console.log(computerNumber)
+      console.log(String(computerNumber).split(''))
+      submitForm.addEventListener('submit', function (e) {
+        e.preventDefault()
+        let playersAnswer = inputBox.value
         if (playersAnswer === String(computerNumber)) {
-          alert("3개의 숫자를 모두 맞추셨습니다 게임 종료!");
-          inputBox.value = "";
-          location.reload();
+          alert('3개의 숫자를 모두 맞추셨습니다 게임 종료!')
+          inputBox.value = ''
+          location.reload()
         } else {
-          let playersAnswerSplitted = inputBox.value.split("");
-          let computerAnswerSplitted = String(computerNumber).split("");
-          let ball = 0;
-          let strike = 0;
+          let playersAnswerSplitted = inputBox.value.split('')
+          let computerAnswerSplitted = String(computerNumber).split('')
+          let ball = 0
+          let strike = 0
           for (let i = 0; i < computerAnswerSplitted.length; i++) {
             if (playersAnswerSplitted[i] === computerAnswerSplitted[i]) {
-              strike += 1;
+              strike += 1
             } else if (
               computerAnswerSplitted.indexOf(playersAnswerSplitted[i]) > -1
             ) {
-              ball += 1;
+              ball += 1
             }
           }
-          let result = document.createElement("div");
-          document.body.append(result);
-          result.textContent = `${strike}스트라이크 ${ball}볼입니다.`;
-          inputBox.value = "";
-          inputBox.focus();
+          let result = document.createElement('div')
+          document.body.append(result)
+          result.textContent = `${strike}스트라이크 ${ball}볼입니다.`
+          inputBox.value = ''
+          inputBox.focus()
         }
-      });
+      })
     </script>
   </body>
 </html>
