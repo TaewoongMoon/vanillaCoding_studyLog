@@ -16,3 +16,4 @@ This repo is a study log repository for vanilla coding admission prep
 - 2021.10.19: 프로그래머스 Alogrithm Level 1, Intro to Programming Note-Taking & Exercise 진행
 - 2021.10.20: Javascript1 & 2 공부 진행
 - 2021.10.21: WebStorm download & Vs Code와 비교하면서 사용중
+- 2021.10.22: Events 공부 진행
