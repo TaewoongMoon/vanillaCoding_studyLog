@@ -1,0 +1,75 @@
+body {
+  background-image: url('images/bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Varela Round', sans-serif;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  font-size: 72px;
+}
+
+.carousel-box {
+  width: 1000px;
+  height: 200px;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-box-wrapper-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-button-previous {
+  font-size: 30px;
+  cursor: pointer;
+}
+.carousel-images-wrapper {
+  max-width: 700px;
+  height: 100px;
+  background: purple;
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+.carousel-images2-wrapper {
+  display: flex;
+}
+.image-1 {
+  min-width: 700px;
+  height: 100px;
+}
+.image-2 {
+  min-width: 700px;
+  height: 100px;
+}
+.image-3 {
+  min-width: 700px;
+  height: 100px;
+}
+.image-4 {
+  min-width: 700px;
+  height: 100px;
+}
+.image-5 {
+  min-width: 700px;
+  height: 100px;
+}
+.carousel-button-next {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.circle-button-box {
+  margin-top: 10px;
+  display: flex;
+}

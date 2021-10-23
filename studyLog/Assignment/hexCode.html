@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      const hexCodeWrapper = document.createElement('div')
+      hexCodeWrapper.style.width = '1000px'
+      hexCodeWrapper.style.height = '200px'
+      let hexCodeWrapperColor = '#3474FF'
+      hexCodeWrapper.style.backgroundColor = hexCodeWrapperColor
+      hexCodeWrapper.style.margin = 'auto'
+      document.body.append(hexCodeWrapper)
+      hexCodeWrapper.style.display = 'flex'
+      hexCodeWrapper.style.flexDirection = 'column'
+      hexCodeWrapper.style.justifyContent = 'center'
+      hexCodeWrapper.style.alignItems = 'center'
+      const hexCodeContentWrapper = document.createElement('div')
+      hexCodeContentWrapper.style.display = 'flex'
+      hexCodeWrapper.appendChild(hexCodeContentWrapper)
+      const hexCodeColor = document.createElement('div')
+      hexCodeColor.style.fontSize = '32px'
+      hexCodeColor.textContent = 'HEX COLOR: '
+      hexCodeContentWrapper.appendChild(hexCodeColor)
+      const hexCode = document.createElement('div')
+      let hexCodeText = '#'
+      hexCode.style.fontSize = '32px'
+      hexCodeContentWrapper.appendChild(hexCode)
+      const hexCodeButton = document.createElement('button')
+      hexCodeButton.style.backgroundColor = 'gray'
+      hexCodeButton.style.color = 'white'
+      hexCodeButton.style.fontSize = '30px'
+      hexCodeButton.textContent = 'CLICK ME'
+      hexCodeButton.style.marginTop = '20px'
+      hexCodeButton.style.borderRadius = '5px'
+      hexCodeWrapper.appendChild(hexCodeButton)
+      function hexCodeChanger() {
+        hexCode.textContent = ''
+        hexCode.style.backgroundColor = ''
+        const hexCodeList = [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          'A',
+          'B',
+          'C',
+          'D',
+          'E',
+          'F',
+        ]
+        let randomIndex
+        let result = ''
+        for (let i = 0; i < 6; i++) {
+          randomIndex = Math.floor(Math.random() * hexCodeList.length)
+          result += hexCodeList[randomIndex]
+        }
+        hexCode.textContent = hexCodeText + result
+        hexCodeWrapper.style.backgroundColor = hexCodeText + result
+        console.log(hexCodeWrapper.style.backgroundColor)
+      }
+      hexCodeButton.addEventListener('click', hexCodeChanger)
+    </script>
+  </body>
+</html>
