@@ -69,3 +69,27 @@ document.querySelector('div').addEventListener('이벤트타입', function (evt)
   - event의 target: 타겟이 된 요소(element)가 출력이 된다.
   - event의 currentTarget: addEventListener를 실행한 대상이 되는 요소를 계속해서 출력한다.
   
+# 이벤트 Capturing & Bubbling
+- Bubbling : 특정 태그에서 이벤트가 발생했을 때 `상위 요소`의 태그까지(부모태그) 해당 이벤트가 전달 되는 것을 의미한다.
+  - 예) CheckBox를 새로 추가할 때 마다 onclick 이벤트를 추가하는게 힘들다. 그래서 부모요소에 onClick 이벤트를 달아주면 하위에서 발생한 이벤트를 감지해준다.
+- Capturing: 특정 상위태그에서 이벤트가 발생했을 때 `하위 요소`의 태그까지 해당 이벤트가 전달 되는 것을 의미한다.
+```javascript
+var divs = document.querySelectorAll('div')
+divs.forEach((data) => {
+    data.addEventListener('click', logEvent, {
+        capture: true
+    })
+})
+function logEvent(event){
+    console.log(event.currentTarget.className)
+}
+// 기존 addEventListener에서 {capture: true}만 넣어주면 된다.
+```
+- 만약 이벤트 전달방식에 대해서 신경쓰지않고 오직 이 요소만 신경쓰고 싶다면?
+```javascript
+function logEvent(event){
+    event.stopPropagation()
+    console.log(event.currentTarget.className) // 하나의 요소만 print되어서 나온다.
+}
+```
+
