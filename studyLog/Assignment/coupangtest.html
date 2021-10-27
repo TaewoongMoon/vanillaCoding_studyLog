@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-sub-box">
+        <div class="auto-sub-box">
+          <div class="logo-box"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // 쿠팡 헤더페이지를 보면 어떻게 고정 1100px을 헤더에 줬음에도 불구하고 반응형처럼 움직일까? 에 대한 부분에 대해서 구현을 간단하게 해보았습니다.
+      const header = document.querySelector('.header')
+      header.style.width = '100%'
+      header.style.height = '130px'
+      header.style.border = '1px solid red'
+      const headerSubBox = document.querySelector('.header-sub-box')
+      headerSubBox.style.width = '1100px'
+      headerSubBox.style.height = '130px'
+      headerSubBox.style.border = '1px solid blue'
+      headerSubBox.style.margin = '0 auto'
+      headerSubBox.style.position = 'relative'
+      const widthAutoSubBox = document.querySelector('.auto-sub-box')
+      widthAutoSubBox.style.width = 'auto'
+      widthAutoSubBox.style.height = '130px'
+      widthAutoSubBox.style.border = '2px solid yellow'
+      const logoBox = document.querySelector('.logo-box')
+      logoBox.style.position = 'absolute'
+      logoBox.style.top = '30px'
+      logoBox.style.width = '120px'
+      logoBox.style.height = '100px'
+      logoBox.style.border = '1px solid green'
+    </script>
+  </body>
+</html>
