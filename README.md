@@ -17,4 +17,7 @@ This repo is a study log repository for vanilla coding admission prep
 - 2021.10.20: Javascript1 & 2 공부 진행
 - 2021.10.21: WebStorm download & Vs Code와 비교하면서 사용중
 - 2021.10.22: Events 공부 진행
-- 20201.10.23: Background Changer & Carousel 기능 구현
+- 2021.10.23: Background Changer & Carousel 기능 구현
+- 2021.10.24 ~ 2021.10.30 : Sensorpia(외주 웹) 작업 진행
+- 2021.10.25: 쿠팡 헤더 궁금증에 대한 부분 구현 진행
+- 2021.10.30: Reference Quiz 진행 및 Calendar 구현 시작

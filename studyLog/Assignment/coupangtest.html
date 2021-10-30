@@ -8,7 +8,9 @@
     <div class="header">
       <div class="header-sub-box">
         <div class="auto-sub-box">
-          <div class="logo-box"></div>
+          <div class="logo-box">
+            <img class="logoImage" src="carousel/images/sensorpiaLogo.png" />
+          </div>
         </div>
       </div>
     </div>
@@ -28,12 +30,16 @@
       widthAutoSubBox.style.width = 'auto'
       widthAutoSubBox.style.height = '130px'
       widthAutoSubBox.style.border = '2px solid yellow'
+      widthAutoSubBox.style.display = 'flex'
+      widthAutoSubBox.style.alignItems = 'center'
       const logoBox = document.querySelector('.logo-box')
-      logoBox.style.position = 'absolute'
       logoBox.style.top = '30px'
       logoBox.style.width = '120px'
       logoBox.style.height = '100px'
       logoBox.style.border = '1px solid green'
+      const logoImage = document.querySelector('.logoImage')
+      logoImage.style.width = '100%'
+      logoImage.style.height = '100%'
     </script>
   </body>
 </html>
