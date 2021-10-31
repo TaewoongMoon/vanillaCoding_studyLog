@@ -18,19 +18,31 @@
 
   <body>
     <section>
-      <div class="image-box">
-        <img
-          class="vanilla-coding-image"
-          src="images/vanilla_coding_logo.png"
-        />
+      <div class="calendar-container">
+        <div class="image-box">
+          <img
+            class="vanilla-coding-image"
+            src="images/vanilla_coding_logo.png"
+          />
+        </div>
+        <h1>Calendar</h1>
+        <!-- 달력 Start -->
+        <div class="current-day">
+          <p class="header-day">SAT</p>
+          <p class="header-date">30</p>
+        </div>
+        <p class="current-month"></p>
+        <div class="calendar">
+          <table>
+            <thead>
+              <tr id="table-box"></tr>
+            </thead>
+          </table>
+          <button class="button-prev"><<</button>
+          <button class="button-next">>></button>
+        </div>
+        <!-- 달력 End -->
       </div>
-      <h1>Calendar</h1>
-      <!-- 달력 Start -->
-      <p>30</p>
-      <div>25</div>
-      <div>1</div>
-      <div>2</div>
-      <!-- 달력 End -->
     </section>
     <script src="index.js"></script>
   </body>
