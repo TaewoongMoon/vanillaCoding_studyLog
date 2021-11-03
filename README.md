@@ -22,3 +22,5 @@ This repo is a study log repository for vanilla coding admission prep
 - 2021.10.25: 쿠팡 헤더 궁금증에 대한 부분 구현 진행
 - 2021.10.30: Reference Quiz 진행 및 Calendar 구현 시작
 - 2021.10.31: Calendar 구현 ~-ing
+- 2021.10.02: Calendar 구현 완료
+- 2021.10.03: Calendar 리팩토링 할 수 있는 부분 도전
