@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WindowSize</title>
+  </head>
+  <body>
+    <div class="screen-box">
+      <div class="window-screen">window.screen:</div>
+      <div class="window-outer">window.outer:</div>
+      <div class="window-inner">window.inner:</div>
+      <div class="document-client">documentElement.clientWidth:</div>
+    </div>
+    <script>
+      const screenBox = document.querySelector(".screen-box");
+      document.body.style.fontSize = "20px";
+      screenBox.style.width = "1100px";
+      screenBox.style.height = "400px";
+      screenBox.style.backgroundColor = "#CBC3EC";
+      const windowWidthHeight = document.querySelector(".window-screen");
+      windowWidthHeight.textContent =
+        "window.screen:" +
+        " " +
+        window.screen.width +
+        " " +
+        window.screen.height;
+      const outerWidthHeight = document.querySelector(".window-outer");
+      outerWidthHeight.textContent =
+        "window.outer:" + " " + outerWidth + " " + outerHeight;
+      const innerWidthHeight = document.querySelector(".window-inner");
+      innerWidthHeight.textContent =
+        "window inner:" + " " + innerWidth + " " + innerHeight;
+      const documentClientWidthHeight =
+        document.querySelector(".document-client");
+      documentClientWidthHeight.textContent =
+        "document-client:" +
+        " " +
+        document.documentElement.clientWidth +
+        " " +
+        document.documentElement.clientHeight;
+      function reportOuterWindowSize() {
+        outerWidthHeight.textContent =
+          "window.outer:" + " " + outerWidth + " " + outerHeight;
+        innerWidthHeight.textContent =
+          "window inner:" + " " + innerWidth + " " + innerHeight;
+        documentClientWidthHeight.textContent =
+          "document-client:" +
+          " " +
+          document.documentElement.clientWidth +
+          " " +
+          document.documentElement.clientHeight;
+      }
+      window.addEventListener("resize", reportOuterWindowSize);
+    </script>
+  </body>
+</html>
