@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>browser_coordinates</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="box-container"></div>
+    <script>
+      document.body.style.backgroundColor = "black";
+      const boxContainer = document.querySelector(".box-container");
+      function boxMaker(index) {
+        const box = document.createElement("div");
+        box.classList.add(`${index}`);
+        box.style.width = "150px";
+        box.style.height = "150px";
+        box.style.background = "orange";
+        box.style.marginTop = "20px";
+        box.style.cursor = "pointer";
+        boxContainer.append(box);
+      }
+      function boxMakerException(index) {
+        const box = document.createElement("div");
+        box.classList.add(`${index}`);
+        box.style.width = "150px";
+        box.style.height = "150px";
+        box.style.background = "purple";
+        box.style.marginTop = "20px";
+        box.style.cursor = "pointer";
+        boxContainer.append(box);
+      }
+      new Array(20).fill(1).map((_, index) => {
+        if (index === 12) {
+          boxMakerException(index);
+        } else {
+          boxMaker(index);
+        }
+      });
+      const purpleBox = document.getElementsByClassName("12")[0];
+      purpleBox.addEventListener("click", (event) => {
+        console.log(event.clientX, event.clientY);
+        console.log(event.pageX, event.pageY);
+      });
+    </script>
+  </body>
+</html>

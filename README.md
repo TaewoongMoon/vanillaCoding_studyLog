@@ -24,3 +24,5 @@ This repo is a study log repository for vanilla coding admission prep
 - 2021.10.31: Calendar 구현 ~-ing
 - 2021.10.02: Calendar 구현 완료
 - 2021.10.03: Calendar 리팩토링 할 수 있는 부분 도전
+- 2021.10.10: Javascript 공부(Web APIs)
+- 2021.10.11: Javascript 공부(Browser Coordinates)

@@ -22,12 +22,7 @@
       screenBox.style.height = "400px";
       screenBox.style.backgroundColor = "#CBC3EC";
       const windowWidthHeight = document.querySelector(".window-screen");
-      windowWidthHeight.textContent =
-        "window.screen:" +
-        " " +
-        window.screen.width +
-        " " +
-        window.screen.height;
+      windowWidthHeight.textContent = `window screen: ${window.screen.width}, ${window.screen.height}`;
       const outerWidthHeight = document.querySelector(".window-outer");
       outerWidthHeight.textContent =
         "window.outer:" + " " + outerWidth + " " + outerHeight;
@@ -43,8 +38,7 @@
         " " +
         document.documentElement.clientHeight;
       function reportOuterWindowSize() {
-        outerWidthHeight.textContent =
-          "window.outer:" + " " + outerWidth + " " + outerHeight;
+        windowWidthHeight.textContent = `window screen: ${window.screen.width}, ${window.screen.height}`;
         innerWidthHeight.textContent =
           "window inner:" + " " + innerWidth + " " + innerHeight;
         documentClientWidthHeight.textContent =
