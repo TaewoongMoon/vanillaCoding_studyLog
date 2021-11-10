@@ -7,10 +7,26 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>browser_coordinates</title>
-    <style></style>
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+      .scroll-box {
+        position: fixed;
+        right: 1%;
+      }
+    </style>
   </head>
   <body>
-    <div class="box-container"></div>
+    <div class="container">
+      <div class="box-container"></div>
+      <div class="scroll-box">
+        <button class="scrollBy">Scroll by 100px(y)</button>
+        <button class="scrollTo">Scroll to 100px(y)</button>
+        <button class="scrollInto">Scroll into special</button>
+      </div>
+    </div>
     <script>
       document.body.style.backgroundColor = "black";
       const boxContainer = document.querySelector(".box-container");
@@ -20,7 +36,7 @@
         box.style.width = "150px";
         box.style.height = "150px";
         box.style.background = "orange";
-        box.style.marginTop = "20px";
+        box.style.marginBottom = "20px";
         box.style.cursor = "pointer";
         boxContainer.append(box);
       }
@@ -30,7 +46,7 @@
         box.style.width = "150px";
         box.style.height = "150px";
         box.style.background = "purple";
-        box.style.marginTop = "20px";
+        box.style.marginBottom = "20px";
         box.style.cursor = "pointer";
         boxContainer.append(box);
       }
@@ -43,8 +59,23 @@
       });
       const purpleBox = document.getElementsByClassName("12")[0];
       purpleBox.addEventListener("click", (event) => {
+        console.log(purpleBox.getBoundingClientRect());
         console.log(event.clientX, event.clientY);
         console.log(event.pageX, event.pageY);
+      });
+      console.log(purpleBox);
+      const scrollBy = document.querySelector(".scrollBy");
+      scrollBy.addEventListener("click", () => {
+        window.scrollBy(0, 100);
+      });
+      const scrollTo = document.querySelector(".scrollTo");
+      scrollTo.addEventListener("click", () => {
+        window.scrollTo(0, 100);
+        console.log("hey");
+      });
+      const scrollInto = document.querySelector(".scrollInto");
+      scrollInto.addEventListener("click", () => {
+        purpleBox.scrollIntoView();
       });
     </script>
   </body>
