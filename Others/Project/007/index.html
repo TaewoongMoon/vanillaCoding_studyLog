@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coordinates</title>
+    <script src="main.js" defer></script>
+    <style>
+      body {
+        background-color: black;
+      }
+      .horizontal-line {
+        border: 1px solid white;
+        position: fixed;
+        width: 100%;
+      }
+      .vertical-line {
+        border: 1px solid white;
+        position: fixed;
+        height: 100%;
+      }
+      img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        index: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="horizontal-line"></div>
+    <div class="vertical-line"></div>
+    <img src="./img/target.png" />
+    <script>
+      const horizontalLine = document.querySelector(".horizontal-line");
+      const verticalLine = document.querySelector(".vertical-line");
+      const targetImage = document.querySelector("img");
+      console.log(targetImage);
+      window.addEventListener("mousemove", (event) => {
+        horizontalLine.style.top = `${event.clientY}px`;
+        verticalLine.style.left = `${event.clientX}px`;
+        targetImage.style.top = `${event.clientY - 60}px`;
+        targetImage.style.left = `${event.clientX - 60}px`;
+      });
+    </script>
+  </body>
+</html>
