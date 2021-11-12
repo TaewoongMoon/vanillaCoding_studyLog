@@ -8,6 +8,7 @@
     <style>
       body {
         background-color: black;
+        margin: 0;
       }
       .horizontal-line {
         border: 1px solid white;
@@ -37,8 +38,8 @@
       const targetImage = document.querySelector("img");
       console.log(targetImage);
       window.addEventListener("mousemove", (event) => {
-        horizontalLine.style.top = `${event.clientY}px`;
-        verticalLine.style.left = `${event.clientX}px`;
+        horizontalLine.style.transform = `translateY(${event.clientY}px)`;
+        verticalLine.style.transform = `translateX(${event.clientX}px)`;
         targetImage.style.top = `${event.clientY - 60}px`;
         targetImage.style.left = `${event.clientX - 60}px`;
       });
