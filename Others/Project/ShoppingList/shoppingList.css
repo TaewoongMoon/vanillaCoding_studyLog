@@ -1,0 +1,53 @@
+body {
+  background: #8ab4f8;
+  font-family: "Varela Round";
+  font-size: 32px;
+}
+
+.shopping-list-box {
+  width: 450px;
+  height: 600px;
+  margin: 100px auto 0 auto;
+  border: 1px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.shopping-list-header {
+  width: 100%;
+  height: 10%;
+  background-color: lightpink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.shopping-list-body {
+  width: 100%;
+  height: 75%;
+  background-color: #dcdcdc;
+}
+.shopping-list-input {
+  width: 100%;
+  height: 5%;
+  border: none;
+  outline: none;
+}
+.shopping-list-footer {
+  width: 100%;
+  height: 10%;
+  background-color: lightpink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
