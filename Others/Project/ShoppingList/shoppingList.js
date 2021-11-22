@@ -1,4 +1,5 @@
 const shoppingListBody = document.querySelector(".shopping-list-body");
+shoppingListBody.style.overflowY = "auto";
 const inputElement = document.querySelector(".shopping-list-input");
 let inputValue = "";
 inputElement.addEventListener("input", (event) => {
@@ -7,6 +8,9 @@ inputElement.addEventListener("input", (event) => {
 
 const buttonClick = document.querySelector(".footer-button");
 buttonClick.addEventListener("click", () => {
+  if (inputValue === "") {
+    return;
+  }
   const shoppingList = document.createElement("div");
   shoppingList.style.margin = "0 30px";
   shoppingList.style.height = "40px";
@@ -21,11 +25,16 @@ buttonClick.addEventListener("click", () => {
   shoppingImage.style.cursor = "pointer";
   shoppingList.appendChild(shoppingImage);
   shoppingListBody.appendChild(shoppingList);
+  inputValue = "";
   inputElement.value = "";
+  inputElement.focus();
 });
 window.addEventListener("keydown", (event) => {
   switch (event.key) {
     case "Enter":
+      if (inputValue === "") {
+        return;
+      }
       const shoppingList = document.createElement("div");
       shoppingList.style.margin = "0 30px";
       shoppingList.style.height = "40px";
@@ -39,7 +48,9 @@ window.addEventListener("keydown", (event) => {
       shoppingImage.style.cursor = "pointer";
       shoppingList.appendChild(shoppingImage);
       shoppingListBody.appendChild(shoppingList);
+      inputValue = "";
       inputElement.value = "";
+      inputElement.focus();
       break;
     default:
       return "Error";
